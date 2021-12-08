@@ -5,7 +5,7 @@ include libs/_bemto/bemto
 
 //- компоненты
 include components/head
-include components/header
+include components/hero
 include components/footer
 
 //- Базовый шаблон
@@ -16,17 +16,17 @@ html(lang="ru")
 
 	body.page
 		block header
-			//- +header()
+			+hero()
 
 		main
 			block content
 
 		block footer
-			+footer()
+			+contacts()
 
 		block libs
 			//- // build:js js/libs.js
-			script(src="js/libs/jquery.min.js")
+			//- script(src="js/libs/jquery.min.js")
 			//- script(src="js/libs/aos/aos.js")
 			//- script(src="js/libs/jquery.validate.min.js")
 			//- script(src="js/libs/jquery.maskedinput.min.js")
@@ -38,6 +38,6 @@ html(lang="ru")
 
 		block scripts
 			//- // build:js js/main.js
-			script(src="js/data.js")
+			//- script(src="js/data.js")
 			script(src="js/main.js")
 			//- // endbuild

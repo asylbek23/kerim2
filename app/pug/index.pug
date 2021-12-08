@@ -1,19 +1,31 @@
 extends template
 
-//- include index/block_name
+include index/about
+include index/opportunity
+include index/advantages
+include index/layouts
+include index/location
+include index/materials
+include index/prices
 
 include components/modals
 
 block head
 	head
 		+head({
-			"title": "Gulp template",
-			"author": "Author",
-			"description": "Description of the site"
+			"title": "Жилой комплек KERIM комфорт класса 2",
+			"author": "Kerim",
+			"description": "Жилой комплек KERIM комфорт класса 2. Квартиры с продуманными планировками от 34 м2"
 		})
 
 block content
-	//- +block_name()
+	+about()
+	+opportunity()
+	+advantages()
+	+layouts()
+	+location()
+	+materials()
+	+prices()
 
 	+modals()
 
