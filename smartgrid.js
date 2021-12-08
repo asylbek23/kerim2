@@ -2,7 +2,7 @@ module.exports = {
 	outputStyle: 'sass',
 	columns: 12,
 	container: {
-		maxWidth: '1450px', /* max-width оn very large screen */
+		maxWidth: '1660px', /* max-width оn very large screen */
 		fields: '30px' /* side fields */
 	},
 	breakPoints: {
