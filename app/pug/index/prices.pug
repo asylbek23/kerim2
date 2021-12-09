@@ -1,4 +1,23 @@
 mixin prices()
 	+b.SECTION.prices
 		.container
-			
+			header
+				.title-info
+					.title-number 07
+					.title-dash
+					.title-text Рассрочка и ипотека
+				h2.title Способы оплаты:
+
+			+e.items
+				+b.prices_item.--mortgage
+					+e.title Ипотека:
+					+e.subtitle Без дополнительного залога
+					+e.percent от 30%
+					+e.fee Первоначальный взнос
+					+e.BUTTON.btn РАССЧИТАТЬ
+				+b.prices_item.--installment
+					+e.title РАССРОЧКА:
+					+e.subtitle Последний платеж до ввода в эксплуатацию
+					+e.percent от 20%
+					+e.fee Первоначальный взнос
+					+e.BUTTON.btn РАССЧИТАТЬ

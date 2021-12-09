@@ -1,0 +1,131 @@
+.prices
+	background-color: #f4f4f4
+	+adaptive-value('padding-top', 90, 55, 1)
+	+adaptive-value('padding-bottom', 110, 20, 1)
+	position: relative
+	z-index: 1
+	overflow: hidden
+	+to(425px)
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 170px
+			background: #fff
+	&:after
+		+xs-block
+			content: ''
+			background: url($img+'/prices/leaf_m.webp') center center/cover no-repeat
+			position: absolute
+			top: -20px
+			right: 0
+			width: 120px
+			height: 230px
+			z-index: -1
+
+	&__items
+		+adaptive-value('margin-top', 85, 55, 1)
+		display: flex
+		justify-content: space-between
+		+to(820px)
+			flex-direction: column
+
+	&_item
+		width: 756px
+		+adaptive-value('padding-top', 80, 40, 1)
+		+adaptive-value('padding-bottom', 80, 40, 1)
+		padding-left: 45px
+		padding-right: 45px
+		text-align: center
+		background-color: #fff
+		position: relative
+		+to(820px)
+			width: 100%
+
+		&--mortgage
+			border: 2px solid #FF4538
+			box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25)
+			border-radius: 0px 200px
+			margin-right: 50px
+			+md-block
+				margin-right: 30px
+			+to(1650px)
+				border-radius: 0 140px
+			+lg-block
+				border-radius: 0 100px
+			+to(820px)
+				border-radius: 0 70px
+			&:before
+				content: ''
+				position: absolute
+				top: 100px
+				left: -70px
+				width: 155px
+				height: 213px
+				background: url($img+'prices/icon_red.webp') center center/cover no-repeat
+				z-index: -1
+				+to(820px)
+					top: 55px
+			button
+				border-radius: 6px 30px
+
+		&--installment
+			border: 2px solid #00BFB2
+			box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25)
+			border-radius: 200px 0px
+			+to(1650px)
+				border-radius: 140px 0
+			+lg-block
+				border-radius: 100px 0
+			+to(820px)
+				border-radius: 70px 0
+				margin-top: 50px
+			&:after
+				content: ''
+				position: absolute
+				top: 200px
+				right: -130px
+				width: 230px
+				height: 260px
+				background: url($img+'prices/icon_blue.webp') center center/cover no-repeat
+				z-index: -1
+				+to(820px)
+					top: 100px
+					right: -100px
+					width: 170px
+					height: 200px
+			.prices_item__subtitle
+				+to(1300px)
+					+adaptive-value('margin-top', 15, 14, 1)
+			button
+				border-radius: 30px 6px
+				background: linear-gradient(0deg, #00BFB2, #00BFB2)
+
+		&__title
+			+adaptive-value('font-size', 36, 30, 1)
+			text-transform: uppercase
+
+		&__subtitle
+			color: #818181
+			+adaptive-value('font-size', 26, 20, 1)
+			+adaptive-value('margin-top', 44, 14, 1)
+
+		&__percent
+			font-size: 50px
+			color: $orange
+			+adaptive-value('margin-top', 50, 25, 1)
+
+		&__fee
+			+adaptive-value('font-size', 26, 20, 1)
+			color: #818181
+			margin-top: 15px
+
+		&__btn
+			color: #fff
+			+adaptive-value('margin-top', 65, 40, 1)
+			background-color: $orange
+			+adaptive-value('width', 295, 245, 1)
+			+adaptive-value('height', 70, 58, 1)
+			+adaptive-value('font-size', 22, 20, 1)

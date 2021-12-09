@@ -1,0 +1,78 @@
+.advantages
+	+adaptive-value('padding-top', 190, 55, 1)
+	position: relative
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		top: -50px
+		right: 0
+		width: 315px
+		height: 415px
+		background: url($img+'advantages/leaf.webp') center center/cover no-repeat
+		+lg-block
+			top: auto
+			bottom: 0
+			right: -30px
+			width: 250px
+			height: 300px
+		+md-block
+			width: 200px
+			height: 250px
+		+to(600px)
+			width: 170px
+			height: 220px
+		+xs-block
+			width: 150px
+			height: 200px
+
+	&__header
+		.title
+			margin-top: -50px
+			+sm-block
+				margin-top: 30px
+		.title-black
+			margin-left: 350px
+			+lg-block
+				margin-left: 300px
+			+sm-block
+				margin-left: 0
+		.title-green
+			max-width: 970px
+		p
+			color: #525252
+			+adaptive-value('font-size', 30, 18, 1)
+			line-height: 1.5
+			max-width: 1020px
+			margin-left: 350px
+			+lg-block
+				margin-left: 300px
+			+md-block
+				margin-left: 0
+				margin-top: 40px
+
+	&__items
+		+adaptive-value('margin-top', 105, 50, 1)
+		+row-flex
+		justify-content: space-between
+		+lg-block
+			justify-content: flex-start
+
+	&__item
+		+col
+		+size(2.4)
+		text-align: center
+		white-space: nowrap
+		+lg-block
+			+size(4)
+			// margin: 0 15px
+			margin-bottom: 40px
+		+to(600px)
+			+size(6)
+			// margin: 0 10px
+			margin-bottom: 30px
+		span
+			display: block
+			color: #383838
+			+adaptive-value('font-size', 30, 18, 1)
+			+adaptive-value('margin-top', 50, 13, 1)

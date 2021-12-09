@@ -1,3 +1,31 @@
 mixin contacts(data)
 	+b.FOOTER.contacts
+		.container
+			+e.header
+				header
+					.title-info
+						.title-number 08
+						.title-dash
+						.title-text Контакты
+					h2.title
+						span.title-black свяжитесь
+						span.title-blue с нами сейчас
+
+			+e.items
+				+b.contacts-item
+					+e.title Отдел продаж:
+					+e.ADDRESS.address Нур-Султан, пр. Туран, д.46а
+				+b.contacts-item
+					+e.title Телефон:
+					+e.A(href="tel:+77001433333").number + 7 700 143 33 33
+				+b.contacts-item
+					+e.title Мессенджеры:
+					+e.messengers
+						a(href="#") Whatsapp
+						a(href="#") Instagram
+						a(href="#") Telegram
+				+b.contacts-item
+					+e.title График работы:
+					+e.time ПН-СБ: с 10:00 до 20:00
+
 

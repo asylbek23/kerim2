@@ -1,22 +1,48 @@
 body, button, input
-  color: $dark
-  font-family: $main_font_regular
-  font-size: 16px
-  // line-height: 1.5
+	color: $dark
+	font-family: $main_font_regular
+	font-size: 16px
+	line-height: 1.15
 
 button
-  cursor: pointer
+	cursor: pointer
 
 strong
-  // +bold
+	// +bold
 
 .page
 
 .container
-  +wrapper()
+	+wrapper()
 
 .title
-  // +adaptive-value('font-size', , , 1)
+	+adaptive-value('font-size', 70, 40, 1)
+	+adaptive-value('margin-top', 35, 30, 1)
+	text-transform: uppercase
+	color: #222
+	display: flex
+	flex-direction: column
+	&-info
+		display: flex
+		align-items: center
+		color: #b4b4b4
+	&-number
+		+adaptive-value('font-size', 20, 18, 1)
+	&-dash
+		width: 46px
+		height: 1px
+		background-color: #b4b4b4
+		margin: 0 20px
+		+xs-block
+			margin: 0 15px
+	&-text
+		+adaptive-value('font-size', 24, 18, 1)
+	&-black
+	&-blue
+		color: $blue
+	&-green
+		color: $green
+
 
 .subtitle
 
