@@ -17,22 +17,16 @@ mixin materials()
 					img(src="img/materials/bg.webp", alt="image")
 					+b.tooltips
 						+e.one
-							+e.IMG(src="img/materials/1.webp").tooltip
-								span.tooltip_icon +
-								span Фасад
+							+e.IMG(src="img/materials/1.webp").img
 							+e.hover Декоративная штукатурка
 						+e.two
-							+e.text.tooltip Основание
+							+e.IMG(src="img/materials/2.webp").img
 							+e.hover Железобетонный монолит
 						+e.three
-							+e.text.tooltip Облицовка
+							+e.IMG(src="img/materials/3.webp").img
 							+e.hover Натуральный камень
 						+e.four
-							+e.text.tooltip Окна
+							+e.IMG(src="img/materials/4.webp").img
 							+e.hover Алюминиевый профиль
-				//- p Text
-				//- p Text
-				//- p Text
-				//- p Text
 			+e.img_mobile
 				img(src="img/materials/bg_m.webp", alt="image")

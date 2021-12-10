@@ -128,36 +128,55 @@
 	color: #fff
 	&__one
 		position: absolute
-		top: 50%
-		left: 10%
+		top: 68%
+		left: 17%
+		cursor: pointer
+		+md-block
+			left: 10%
+		+sm-block
+			left: 5%
 	&__two
 		position: absolute
-		top: 50%
-		left: 30%
+		top: 43%
+		left: 32%
+		cursor: pointer
+		+md-block
+			left: 27%
+		+sm-block
+			left: 22%
 	&__three
 		position: absolute
-		top: 50%
-		left: 60%
+		top: 28%
+		left: 55%
+		cursor: pointer
+		+md-block
+			left: 52%
+		+sm-block
+			left: 45%
 	&__four
 		position: absolute
-		top: 50%
-		left: 80%
+		top: 53%
+		left: 74%
+		cursor: pointer
+		+sm-block
+			left: 65%
+
+	&__img
+		+md-block
+			transform: scale(.8)
 
 	&__hover
 		font-size: 15px
 		background: rgba(0, 0, 0, 0.48)
 		backdrop-filter: blur(29px)
 		padding: 13px
-		margin-left: 50px
-
-.tooltip
-	// position: relative
-	// &:before
-	// 	content: '+'
-	// 	position: absolute
-	// 	top: 0
-	// 	left: -52px
-	// 	width: 46px
-	// 	height: 46px
-	// 	background-color: #fff
-	// 	font-size: 150%
+		margin-left: 51px
+		opacity: 0
+		transition: all .5s
+		&.active
+			opacity: 1
+		+md-block
+			font-size: 13px
+			padding: 10px
+			margin-left: 58px
+			margin-top: -7px

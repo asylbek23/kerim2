@@ -922,26 +922,30 @@ button {
 
 .tooltips__one {
   position: absolute;
-  top: 50%;
-  left: 10%;
+  top: 68%;
+  left: 17%;
+  cursor: pointer;
 }
 
 .tooltips__two {
   position: absolute;
-  top: 50%;
-  left: 30%;
+  top: 43%;
+  left: 32%;
+  cursor: pointer;
 }
 
 .tooltips__three {
   position: absolute;
-  top: 50%;
-  left: 60%;
+  top: 28%;
+  left: 55%;
+  cursor: pointer;
 }
 
 .tooltips__four {
   position: absolute;
-  top: 50%;
-  left: 80%;
+  top: 53%;
+  left: 74%;
+  cursor: pointer;
 }
 
 .tooltips__hover {
@@ -950,7 +954,13 @@ button {
   -webkit-backdrop-filter: blur(29px);
           backdrop-filter: blur(29px);
   padding: 13px;
-  margin-left: 50px;
+  margin-left: 51px;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.tooltips__hover.active {
+  opacity: 1;
 }
 
 .prices {
@@ -1642,6 +1652,29 @@ button {
     margin-top: 40px;
   }
 
+  .tooltips__one {
+    left: 10%;
+  }
+
+  .tooltips__two {
+    left: 27%;
+  }
+
+  .tooltips__three {
+    left: 52%;
+  }
+
+  .tooltips__img {
+    transform: scale(0.8);
+  }
+
+  .tooltips__hover {
+    font-size: 13px;
+    padding: 10px;
+    margin-left: 58px;
+    margin-top: -7px;
+  }
+
   .prices_item--mortgage {
     margin-right: 30px;
   }
@@ -1761,6 +1794,22 @@ button {
 
   .location__header p {
     margin-top: 20px;
+  }
+
+  .tooltips__one {
+    left: 5%;
+  }
+
+  .tooltips__two {
+    left: 22%;
+  }
+
+  .tooltips__three {
+    left: 45%;
+  }
+
+  .tooltips__four {
+    left: 65%;
   }
 }
 
