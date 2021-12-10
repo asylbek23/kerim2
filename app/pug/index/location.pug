@@ -1,3 +1,45 @@
 mixin location()
 	+b.SECTION.location
 		.container
+
+			+e.header
+				header
+					.title-info
+						.title-number 05
+						.title-dash
+						.title-text Расположение
+					h2.title
+						span.title-black Активно
+						span.title-blue развивающийся <br> район
+				p Отличная возможность пользоваться всеми преимуществами жизни в мегаполисе, при этом оставаясь в комфортной и уединенной атмосфере, которую вам дарит расположение ЖК.
+
+			+e.content
+				+b.location_items
+					+b.location_item
+						+e.title Пешком:
+						+e.block.building
+							div 5 минут
+							span “НУРЛЫ ЖОЛ”
+						+e.block.mall
+							div 15 минут
+							span Магазин “Фермер”
+
+					+b.location_item
+						+e.title На машине:
+						+e.block.castle
+							div 15 минут
+							span Дворец мира и согласия
+						+e.block.mall
+							div 10 минут
+							span Супермаркет “Metro”
+
+					+b.location_item
+						+e.title на автобусе:
+						+e.block.castle
+							div 5 минут
+							span Дворец культуры
+						+e.block.mosque
+							div 15 минут
+							span Мечеть “Хазрет Султан”
+
+				+b.location_map

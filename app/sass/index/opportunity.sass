@@ -1,0 +1,82 @@
+.opportunity
+	background-color: #f4f4f4
+	padding-top: 580px
+	+adaptive-value('padding-bottom', 80, 70, 1)
+	+lg-block
+		padding-top: 100px
+	+sm-block
+		padding-top: 60px
+
+	&__header
+		.title
+			margin-top: -50px
+			+sm-block
+				margin-top: 30px
+		.title-black
+			margin-left: 350px
+			+lg-block
+				margin-left: 300px
+			+sm-block
+				margin-left: 0
+
+	&__items
+		+adaptive-value('margin-top', 75, 40, 1)
+		+row-flex
+		justify-content: space-between
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: -14px
+			right: 0
+			width: 103px
+			height: 105px
+			background: url($img+'opportunity/icon.svg') center center/cover no-repeat
+			+md-block
+				display: none
+
+	&__item
+		+col
+		+size(2.4)
+		+md-block
+			+size(12)
+			margin-bottom: 50px
+			&:last-of-type
+				margin-bottom: 0
+		span
+			display: block
+			background-color: green
+			width: 100%
+			height: 400px
+			object-fit: cover
+
+	&__img
+		&_desktop
+			+md-block
+				display: none
+		&_mobile
+			display: none
+			+md-block
+				display: block
+			+xs-block
+				width: 100%
+
+	&__title
+		text-transform: uppercase
+		+adaptive-value('font-size', 30, 24, 1)
+		+adaptive-value('margin-top', 55, 25, 1)
+		+to(1300px)
+			font-size: 26px
+		+md-block
+			+adaptive-value('font-size', 30, 24, 1)
+
+	&__text
+		color: #525252
+		line-height: 1.5
+		+adaptive-value('font-size', 22, 18, 1)
+		+adaptive-value('margin-top', 25, 15, 1)
+		max-width: 700px
+		+to(1300px)
+			font-size: 18px
+		+md-block
+			+adaptive-value('font-size', 22, 18, 1)

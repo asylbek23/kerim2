@@ -1,0 +1,146 @@
+.about
+	z-index: 1
+	position: relative
+	+adaptive-value('padding-top', 140, 70, 1)
+	margin-bottom: -430px
+	overflow: hidden
+	+lg-block
+		margin-bottom: 100px
+	+sm-block
+		margin-bottom: 60px
+
+	.container
+		position: relative
+		display: flex
+		flex-direction: column
+		&:after
+			content: ''
+			position: absolute
+			top: -30px
+			right: 0
+			width: 201px
+			height: 201px
+			background: url($img+'about/stamp.svg') center center/cover no-repeat
+			+to(1650px)
+				right: -100px
+			+md-block
+				width: 148px
+				height: 148px
+				right: -74px
+
+	&__header
+		z-index: 2
+		+lg-block
+			order: 1
+		.title
+			margin-top: -50px
+			+lg-block
+				margin-top: 30px
+		.title-black
+			margin-left: 362px
+			+to(1400px)
+				margin-left: 270px
+			+lg-block
+				margin-left: 0
+		.title-green
+			max-width: 970px
+		p
+			color: #525252
+			+adaptive-value('font-size', 30, 18, 1)
+			line-height: 1.5
+			max-width: 1020px
+			margin-left: 350px
+			+lg-block
+				margin-left: 300px
+			+md-block
+				margin-left: 0
+				margin-top: 40px
+
+	&__text
+		display: flex
+		justify-content: flex-end
+		color: #525252
+		line-height: 1.5
+		z-index: 2
+		+adaptive-value('font-size', 30, 20, 1)
+		padding-left: 200px
+		+to(1650px)
+			margin-top: 40px
+		+lg-block
+			flex-direction: column
+			padding-left: 0
+			order: 3
+		p
+			max-width: 645px
+			width: 55%
+			+lg-block
+				max-width: 800px
+				width: 100%
+			&:first-of-type
+				width: 480px
+				margin-right: 100px
+				+to(1650px)
+					width: 45%
+					margin-right: 60px
+				+lg-block
+					width: 100%
+					margin-bottom: 35px
+
+	&__img
+		&_desktop
+			display: block
+			position: relative
+			z-index: 1
+			&:before
+				content: ''
+				position: absolute
+				top: -180px
+				left: -155px
+				width: 430px
+				height: 710px
+				background-color: $orange
+				z-index: -1
+				+to(1650px)
+					left: -260px
+					height: 600px
+				+lg-block
+					height: 500px
+					left: auto
+					right: -150px
+					top: -120px
+				+md-block
+					top: -50px
+					height: 350px
+				+sm-block
+					height: 300px
+					right: -200px
+			+adaptive-value('margin-top', 75, 35, 1)
+			+lg-block
+				order: 2
+			+to(600px)
+				display: none
+
+		&_mobile
+			position: relative
+			display: none
+			+lg-block
+				order: 2
+			+to(600px)
+				position: relative
+				display: block
+				z-index: 1
+				margin-top: 35px
+				&:before
+					content: ''
+					position: absolute
+					width: 430px
+					background-color: $orange
+					top: -50px
+					height: 300px
+					right: -200px
+					z-index: -1
+					+xs-block
+						right: -280px
+						height: 250px
+				img
+					width: 100%

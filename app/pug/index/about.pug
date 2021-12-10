@@ -1,4 +1,19 @@
 mixin about()
 	+b.SECTION.about
 		.container
-			
+			+e.header
+				header
+					.title-info
+						.title-number 01
+						.title-dash
+						.title-text О проекте
+					h2.title
+						span.title-black Территория комплекса
+						span.title-red формирует комфортную и<br>уединенную среду для<br>жизни
+			+e.text
+				p KERIM 2 - жилой комплекс комфорт-класса, расположенный в развивающемся районе столицы.
+				p Жизнь здесь размеренна и спокойна. Но если вам захочется почувствовать бурлящую атмосферу мегаполиса, достаточно выйти за пределы ЖК.
+			+e.img_desktop
+				img(src="img/about/bg.webp", alt="image")
+			+e.img_mobile
+				img(src="img/about/bg_m.webp", alt="image")
