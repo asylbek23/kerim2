@@ -16,6 +16,10 @@ module.exports = {
 			width: '768px',
 			fields: '15px'
 		},
+		xsm: {
+			width: '600px',
+			fields: '15px'
+		},
 		xs: {
 			width: '480px'
 		}

@@ -18,6 +18,7 @@ mixin materials()
 					+b.tooltips
 						+e.one
 							+e.IMG(src="img/materials/1.webp").img
+							//- .text Фасад
 							+e.hover Декоративная штукатурка
 						+e.two
 							+e.IMG(src="img/materials/2.webp").img
@@ -30,3 +31,18 @@ mixin materials()
 							+e.hover Алюминиевый профиль
 			+e.img_mobile
 				img(src="img/materials/bg_m.webp", alt="image")
+				+b.tooltips
+					+e.one
+						+e.IMG(src="img/materials/1.webp").img
+						//- .text.tooltip_one Фасад
+						+e.hover.mob Декоративная штукатурка
+						//- .hover Декоративная штукатурка
+					+e.two
+						+e.IMG(src="img/materials/2.webp").img
+						+e.hover.mob Железобетонный монолит
+					+e.three
+						+e.IMG(src="img/materials/3.webp").img
+						+e.hover.mob Натуральный камень
+					+e.four
+						+e.IMG(src="img/materials/4.webp").img
+						+e.hover.mob Алюминиевый профиль

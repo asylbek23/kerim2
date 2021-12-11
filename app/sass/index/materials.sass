@@ -97,9 +97,17 @@
 				z-index: 2
 			+to(600px)
 				display: none
+				.tooltips
+					display: none
 		&_mobile
 			position: relative
 			display: none
+			.tooltips
+				img
+					height: 53px
+					// width: 176px
+					// transform: scale(.7)
+					object-fit: contain
 			+to(600px)
 				position: relative
 				display: block
@@ -130,36 +138,56 @@
 		position: absolute
 		top: 68%
 		left: 17%
-		cursor: pointer
 		+md-block
 			left: 10%
 		+sm-block
 			left: 5%
+		+to(600px)
+			left: 6%
+			top: 74%
+			&.active
+				opacity: 1
+		+to(425px)
+			.mob
+				margin-left: 137px
 	&__two
 		position: absolute
 		top: 43%
 		left: 32%
-		cursor: pointer
 		+md-block
 			left: 27%
 		+sm-block
 			left: 22%
+		+to(600px)
+			left: 3%
+			top: 35%
+		+to(425px)
+			.mob
+				margin-left: 116px
 	&__three
 		position: absolute
 		top: 28%
 		left: 55%
-		cursor: pointer
 		+md-block
 			left: 52%
 		+sm-block
 			left: 45%
+		+to(600px)
+			left: 34%
+			top: 16%
 	&__four
 		position: absolute
 		top: 53%
 		left: 74%
-		cursor: pointer
 		+sm-block
 			left: 65%
+		+to(600px)
+			left: 25%
+			top: 53%
+		+to(425px)
+			left: 18%
+			.mob
+				margin-left: 133px
 
 	&__img
 		+md-block
@@ -180,3 +208,7 @@
 			padding: 10px
 			margin-left: 58px
 			margin-top: -7px
+		+to(600px)
+			margin-left: 74px
+			margin-left: 82px
+			margin-top: 0

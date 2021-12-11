@@ -678,6 +678,83 @@ button {
   margin-left: 350px;
 }
 
+.layouts__content {
+  margin-top: 80px;
+}
+
+.layouts__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.layouts_item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(25% - 30px);
+  border: 1px solid #C6C6C6;
+  border-radius: 10px;
+  padding: 30px 40px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.layouts_item__title {
+  color: #7c7c7c;
+  font-size: 18px;
+}
+
+.layouts_item__size {
+  font-size: 26px;
+  font-family: "PTSans Bold";
+  margin-top: 10px;
+}
+
+.layouts_item__btn {
+  color: #FF4538;
+  text-transform: uppercase;
+  font-family: "PTSans Bold";
+  font-size: 18px;
+  border: 2px solid #FF4538;
+  border-radius: 6px;
+  height: 56px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  border-radius: 71px 71px 4px 4px;
+  border: 1px solid #FF4538;
+  overflow: hidden;
+}
+
+.tab {
+  font-size: 22px;
+  width: calc(100% / 3);
+  text-align: center;
+  cursor: pointer;
+  padding: 15px 0;
+}
+
+.tab:first-of-type {
+  border-right: 1px solid #FF4538;
+}
+
+.tab:last-of-type {
+  border-left: 1px solid #FF4538;
+}
+
+.tab.active {
+  font-family: "PTSans Bold";
+  color: #fff;
+  background-color: #FF4538;
+}
+
 .location {
   background-color: #f9f9f9;
   padding-top: 200px;
@@ -813,6 +890,7 @@ button {
   width: 78%;
   background: #385e97;
   height: 800px;
+  border-radius: 0px 0px 300px 0px;
   height: 800px;
 }
 
@@ -916,6 +994,12 @@ button {
   display: none;
 }
 
+.materials__img_mobile .tooltips img {
+  height: 53px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .tooltips {
   color: #fff;
 }
@@ -924,28 +1008,24 @@ button {
   position: absolute;
   top: 68%;
   left: 17%;
-  cursor: pointer;
 }
 
 .tooltips__two {
   position: absolute;
   top: 43%;
   left: 32%;
-  cursor: pointer;
 }
 
 .tooltips__three {
   position: absolute;
   top: 28%;
   left: 55%;
-  cursor: pointer;
 }
 
 .tooltips__four {
   position: absolute;
   top: 53%;
   left: 74%;
-  cursor: pointer;
 }
 
 .tooltips__hover {
@@ -1227,6 +1307,14 @@ button {
     font-size: calc(18px + 12 * ((100vw - 375px) / 965));
   }
 
+  .layouts__content {
+    margin-top: calc(45px + 35 * ((100vw - 375px) / 965));
+  }
+
+  .tab {
+    font-size: calc(18px + 4 * ((100vw - 375px) / 965));
+  }
+
   .location {
     padding-top: calc(60px + 140 * ((100vw - 375px) / 965));
   }
@@ -1475,6 +1563,14 @@ button {
     margin-top: 30px;
   }
 
+  .layouts_item {
+    width: calc(33.33333% - 30px);
+  }
+
+  .layouts_item {
+    padding: 30px 35px;
+  }
+
   .location:after {
     width: 160px;
     height: 160px;
@@ -1627,6 +1723,10 @@ button {
   .layouts__header p {
     margin-left: 0;
     margin-top: 40px;
+  }
+
+  .layouts_item {
+    width: calc(50% - 30px);
   }
 
   .location__header p {
@@ -1784,6 +1884,22 @@ button {
     margin-top: 20px;
   }
 
+  .layouts_item {
+    margin-top: 25px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    border: none;
+    border-radius: 40px 40px 4px 4px;
+  }
+
+  .tab {
+    width: 100%;
+    border: 1px solid #FF4538;
+    margin-bottom: 7px;
+  }
+
   .location__header .title {
     margin-top: 30px;
   }
@@ -1814,6 +1930,11 @@ button {
 }
 
 @media screen and (max-width: 600px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .about__img_desktop {
     display: none;
   }
@@ -1850,11 +1971,27 @@ button {
     margin-bottom: 30px;
   }
 
+  .layouts__items {
+    margin-top: 20px;
+  }
+
+  .layouts_item {
+    width: calc(100% - 30px);
+  }
+
+  .layouts_item {
+    margin-top: 0;
+  }
+
   .materials {
     overflow: hidden;
   }
 
   .materials__img_desktop {
+    display: none;
+  }
+
+  .materials__img_desktop .tooltips {
     display: none;
   }
 
@@ -1886,6 +2023,36 @@ button {
   .materials__img_mobile img {
     display: block;
     width: 100%;
+  }
+
+  .tooltips__one {
+    left: 6%;
+    top: 74%;
+  }
+
+  .tooltips__one.active {
+    opacity: 1;
+  }
+
+  .tooltips__two {
+    left: 3%;
+    top: 35%;
+  }
+
+  .tooltips__three {
+    left: 34%;
+    top: 16%;
+  }
+
+  .tooltips__four {
+    left: 25%;
+    top: 53%;
+  }
+
+  .tooltips__hover {
+    margin-left: 74px;
+    margin-left: 82px;
+    margin-top: 0;
   }
 }
 
@@ -1948,6 +2115,22 @@ button {
     background-image: url("../img/contacts/bg_m.webp");
     background-size: contain;
     padding-bottom: 330px;
+  }
+
+  .tooltips__one .mob {
+    margin-left: 137px;
+  }
+
+  .tooltips__two .mob {
+    margin-left: 116px;
+  }
+
+  .tooltips__four {
+    left: 18%;
+  }
+
+  .tooltips__four .mob {
+    margin-left: 133px;
   }
 
   .prices:before {

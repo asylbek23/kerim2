@@ -42,3 +42,77 @@
 				margin-top: 40px
 			+sm-block
 				margin-top: 20px
+
+	&__content
+		+adaptive-value('margin-top', 80, 45, 1)
+
+	&__items
+		+row-flex
+		+xsm-block
+			margin-top: 20px
+
+	&_item
+		+col
+		+size(3)
+		+size-lg(4)
+		+size-md(6)
+		+size-xsm(12)
+		border: 1px solid #C6C6C6
+		border-radius: 10px
+		padding: 30px 40px
+		text-align: center
+		margin-top: 50px
+		+lg-block
+			padding: 30px 35px
+		+sm-block
+			margin-top: 25px
+		+xsm-block
+			margin-top: 0
+		&__title
+			color: #7c7c7c
+			font-size: 18px
+		&__size
+			font-size: 26px
+			font-family: $bold
+			margin-top: 10px
+		&__btn
+			color: $orange
+			text-transform: uppercase
+			font-family: $bold
+			font-size: 18px
+			border: 2px solid #FF4538
+			border-radius: 6px
+			height: 56px
+			width: 100%
+			margin-top: 20px
+
+
+.tabs
+	display: flex
+	align-items: center
+	border-radius: 71px 71px 4px 4px
+	border: 1px solid $orange
+	overflow: hidden
+	+sm-block
+		flex-direction: column
+		border: none
+		border-radius: 40px 40px 4px 4px
+
+.tab
+	+adaptive-value('font-size', 22, 18, 1)
+	width: calc(100% / 3)
+	text-align: center
+	cursor: pointer
+	padding: 15px 0
+	+sm-block
+		width: 100%
+		border: 1px solid $orange
+		margin-bottom: 7px
+	&:first-of-type
+		border-right: 1px solid $orange
+	&:last-of-type
+		border-left: 1px solid $orange
+	&.active
+		font-family: $bold
+		color: #fff
+		background-color: $orange
