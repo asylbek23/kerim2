@@ -7,10 +7,15 @@ body, button, input
 button
 	cursor: pointer
 
-strong
-	// +bold
-
 .page
+	&.active
+		overflow: hidden
+		padding-right: 17px
+
+.header
+	&.active
+		opacity: 0
+		visibility: hidden
 
 .container
 	+wrapper()
@@ -45,7 +50,9 @@ strong
 	&-red
 		color: $orange
 
-
 .subtitle
 
 .text
+
+#baguetteBox-overlay
+	background-color: #dadada !important

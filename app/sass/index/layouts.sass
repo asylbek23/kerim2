@@ -1,8 +1,11 @@
 .layouts
 	+adaptive-value('padding-top', 200, 60, 1)
-	+adaptive-value('padding-bottom', 120, 60, 1)
+	// +adaptive-value('padding-bottom', 120, 60, 1)
+	padding-bottom: 120px
 	position: relative
 	z-index: 1
+	+md-block
+		padding-bottom: 60px
 	&:after
 		content: ''
 		position: absolute
@@ -47,9 +50,29 @@
 		+adaptive-value('margin-top', 80, 45, 1)
 
 	&__items
-		+row-flex
-		+xsm-block
-			margin-top: 20px
+		// transition: all .3s
+		// +row-flex
+		&_mobile
+			display: none
+			+md-block
+				display: block
+				margin-top: 20px
+				// .swiper-wrapper
+				// 	+row-flex
+		&--mobile
+			display: none
+			+sm-block
+				display: flex !important
+				margin-left: 0
+				margin-right: 0
+			.layouts_item
+				margin-left: 0
+				margin-right: 15px
+				margin-right: 0
+		&_desktop
+			+row-flex
+			+md-block
+				display: none
 
 	&_item
 		+col
@@ -61,11 +84,13 @@
 		border-radius: 10px
 		padding: 30px 40px
 		text-align: center
+		// transition: all .3s
 		margin-top: 50px
 		+lg-block
 			padding: 30px 35px
-		+sm-block
+		+md-block
 			margin-top: 25px
+			margin-left: 0
 		+xsm-block
 			margin-top: 0
 		&__title
@@ -93,10 +118,15 @@
 	border-radius: 71px 71px 4px 4px
 	border: 1px solid $orange
 	overflow: hidden
+
 	+sm-block
 		flex-direction: column
 		border: none
 		border-radius: 40px 40px 4px 4px
+
+	+xsm-block
+		margin-right: 0
+		margin-left: 0
 
 .tab
 	+adaptive-value('font-size', 22, 18, 1)
@@ -105,14 +135,84 @@
 	cursor: pointer
 	padding: 15px 0
 	+sm-block
+		color: #636363
 		width: 100%
-		border: 1px solid $orange
+		border: 1px solid rgba(255, 69, 56, 0.71)
 		margin-bottom: 7px
 	&:first-of-type
 		border-right: 1px solid $orange
+		+sm-block
+			border: 1px solid rgba(255, 69, 56, 0.71)
+			border-radius: 40px 40px 0 0
 	&:last-of-type
 		border-left: 1px solid $orange
+		+sm-block
+			border: 1px solid rgba(255, 69, 56, 0.71)
 	&.active
 		font-family: $bold
 		color: #fff
 		background-color: $orange
+
+// Swiper Slider Settings
+.navigation
+	display: none
+	+md-block
+		display: block
+		margin-top: 40px
+	+sm-block
+		margin-top: 20px
+		// position: absolute
+		// width: 100%
+		// left: 0
+		// bottom: 63px
+		// padding-right: 15px
+		// padding-left: 15px
+
+
+
+.swiper
+
+	&-buttons
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+		height: 46px
+
+	&-prev
+		width: 46px
+		height: 46px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			background-image: url($img+'layouts/left.svg')
+			top: 0
+			left: 0
+			width: 46px
+			height: 46px
+
+	&-next
+		width: 46px
+		height: 46px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			// left: -46px
+			width: 46px
+			height: 46px
+			background-image: url($img+'layouts/right.svg')
+
+.swiper-pagination
+	width: 250px !important
+	bottom: auto !important
+	margin: 0 auto
+	position: static
+	// top: 75%
+	// transform: translateY(-50%)
+
+
+.lg-img-wrap
+	background-color: #fff

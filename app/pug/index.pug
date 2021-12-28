@@ -8,6 +8,8 @@ include index/location
 include index/materials
 include index/prices
 
+include index/gallery
+
 include components/modals
 
 block head
@@ -27,7 +29,11 @@ block content
 	+materials()
 	+prices()
 
+	+gallery()
+
 	+modals()
+
+	button.button-open
 
 
 

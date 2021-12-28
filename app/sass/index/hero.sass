@@ -1,0 +1,483 @@
+.hero
+	background: url($img+'hero/bg.webp') center center/cover no-repeat
+	position: relative
+	height: 100vh
+	+sm-block
+		height: 1220px
+		background: url($img+'hero/main_m.webp') center center/cover no-repeat
+
+
+	// HERO CONTENT
+	&__content
+		position: absolute
+		top: 100px
+		left: 30%
+		+lg-block
+			top: 150px
+			left: 34%
+		+to(1023px)
+			left: 30px
+		+sm-block
+			top: 130px
+			left: 15px
+		img
+			+lg-block
+				max-width: 70%
+		p
+			color: #fff
+			+adaptive-value('font-size', 30, 18, 1)
+			line-height: 1.5
+			+adaptive-value('margin-top', 40, 25, 1)
+		a
+			display: inline-block
+			color: #fff
+			+adaptive-value('font-size', 30, 20, 1)
+			background-color: $orange
+			padding: 15px 54px
+			border-radius: 20px 0px
+			+adaptive-value('margin-top', 50, 22, 1)
+
+	&__title
+		display: flex
+		align-items: center
+		color: #fff
+		text-transform: uppercase
+		&_left
+			line-height: 1
+			text-align: justify
+			span
+				+adaptive-value('font-size', 40, 20, 1)
+			div
+				font-family: $bold
+				+adaptive-value('font-size', 150, 80, 1)
+		&_right
+			font-family: 'Preahvihear'
+			+adaptive-value('font-size', 360, 200, 1)
+
+// HEADER
+.header
+	+to(1023px)
+		position: fixed
+		width: 100%
+		border-bottom: 1px solid #c2c2c2
+		z-index: 999
+	// Fixed ---------
+	&.fixed
+		position: fixed
+		width: 100%
+		top: 0
+		left: 0
+		z-index: 999
+
+	// HEADER CONTAINER
+	.container
+		&.fixed
+			padding: 0
+			width: 100%
+			max-width: 2600px
+			.header__content
+				margin: 0
+
+	.big-logo
+		+to(1023px)
+			display: none
+
+	.small-logo
+		display: none
+		+to(1023px)
+			display: block
+
+	// HEADER CONTENT ------------->
+	&__content
+		display: flex
+		justify-content: space-between
+		+to(1023px)
+			height: 75px
+			align-items: center
+			background-color: #fff
+			margin-right: -30px
+			margin-left: -30px
+		+sm-block
+			margin-right: -15px
+			margin-left: -15px
+		// Header Content Fixed
+		&.fixed
+			background-color: #fff
+			border-bottom: 1px solid #c2c2c2
+			padding: 0 30px
+			height: 116px
+			z-index: 999
+			+to(1600px)
+				height: 76px
+			+md-block
+				padding: 0
+			+sm-block
+				padding: 0
+			.big-logo
+				display: none
+			.small-logo
+				min-width: 190px
+				display: block
+				+to(1600px)
+					width: 160px
+					min-width: initial
+				+sm-block
+					width: 140px
+
+	// HEADER MENU --------------->
+	&__menu
+		width: 270px
+		padding-top: 30px
+		position: relative
+		z-index: 1
+		// HEADER MENU Fixed ---------
+		&.fixed
+			display: flex
+			padding-top: 0
+			width: auto
+			&:before
+				display: none
+			// HEADER Logo --------
+			.header__logo
+				display: flex
+				align-items: center
+				padding-left: 0
+				padding-right: 38px
+				border-right: 1px solid #dfdfdf
+				+to(1600px)
+					border-right: none
+				+md-block
+					width: auto
+					padding-right: 0
+					padding-left: 15px
+		+to(1023px)
+			width: auto
+			display: flex
+			padding-top: 0
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 270px
+			height: 700px
+			background-color: #fff
+			z-index: -1
+			+to(1023px)
+				display: none
+
+		// HEADER MENU BTN -----------------
+		&_btn
+			display: none
+			cursor: pointer
+			.menu_lines
+				width: 33px
+				// background: #222
+				&:hover
+					.middle
+						width: 25px
+				span
+					transition: all .3s
+			+to(1023px)
+				display: flex
+				margin-left: 0
+			// Header Menu Btn FIXED
+			&.fixed
+				display: flex
+				+md-block
+					margin-left: 0
+			// Header Menu Btn ACTIVE
+			&.active
+				.menu_lines
+					.top
+						transform: translateY(10px) rotate(45deg) scale(1.2)
+					.middle
+						opacity: 0
+					.bottom
+						transform: translateY(-10px) rotate(-45deg) scale(1.2)
+			+to(1600px)
+				// display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				width: 75px
+				height: 75px
+				background-color: $orange
+				margin-left: 30px
+				.menu_lines
+					display: flex
+					flex-direction: column
+					align-items: flex-end
+					span
+						display: block
+						background-color: #fff
+						height: 3px
+						border-radius: 4px
+					.top
+						width: 25px
+					.middle
+						margin: 7px 0
+						width: 33px
+					.bottom
+						width: 25px
+
+	// HEADER LOGO -----------------
+	&__logo
+		padding-left: 64px
+		+to(1023px)
+			height: 100%
+			padding-left: 20px
+			width: 150px
+			// height: 50px
+		+sm-block
+			width: auto
+			padding-left: 15px
+			.small-logo
+				width: 140px
+
+	// HEADER ITEMS
+	&__items
+		margin-top: 37px
+		// Fixed -----
+		&.fixed
+			display: flex
+			padding-left: 30px
+			margin-top: 0
+			+to(1600px)
+				display: none
+			// Header item
+			.header__item
+				height: 115px
+				padding: 0 17px
+				font-size: 17px
+				border-left: none
+				background-color: transparent
+				&.active
+					a
+						color: $orange
+						height: 100%
+						line-height: 112px
+						border-bottom: 3px solid $orange
+						border-left: none
+		+to(1023px)
+			display: none
+
+	// HEADER ITEM -----------------
+	&__item
+		padding-left: 60px
+		padding-top: 12px
+		padding-bottom: 12px
+		font-size: 24px
+		display: flex
+		align-items: center
+		white-space: nowrap
+		a
+			// transition: all .3s
+		&:first-of-type
+			padding-left: 54px
+			border-left: 6px solid $orange
+			background: rgba(255, 69, 56, 0.08)
+			+to(1023px)
+				background: #fff
+				border: none
+
+	// HEADER NAV --------------->
+	&__nav
+		display: flex
+		align-items: center
+		padding-top: 50px
+		height: 54px
+		&.fixed
+			+to(1600px)
+				height: auto
+				padding-top: 0
+			& .header__number
+				border: 1px solid $orange
+				height: 45px
+				+md-block
+					height: 75px
+					border: none
+			& .header__insta
+				margin-right: 25px
+				a
+					background: url($img+'hero/instagram-orange.svg') center center/cover no-repeat
+		+to(1023px)
+			padding-top: 0
+			height: auto
+
+	&__insta
+		margin-right: 37px
+		+to(1023px)
+			display: none
+		a
+			display: block
+			background: url($img+'hero/instagram-white.svg') center center/cover no-repeat
+			width: 26px
+			height: 26px
+
+	&__number
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		width: 236px
+		height: 54px
+		border-radius: 30px
+		background-color: #fff
+		padding-right: 23px
+		+to(1023px)
+			background-color: #FDEBEA
+			width: 75px
+			height: 75px
+			justify-content: center
+			border-radius: 0
+			padding: 0
+		span
+			background: url($img+'hero/phone.svg') center center/cover no-repeat
+			width: 21px
+			height: 21px
+			margin-right: 13px
+			+to(1023px)
+				margin: 0
+		p
+			font-size: 18px
+			display: block
+			+to(1023px)
+				display: none
+
+
+
+// HEADER MENU
+.header_menu
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	transform: translateY(-100%)
+	transition: all .5s
+	background-color: #f8f8f8
+	z-index: 998
+	padding: 30px 0
+	&.active
+		transform: translateY(76px)
+		border-bottom: 1px solid #d3d3d3
+		height: 100%
+		overflow: auto
+		+md-block
+			&:before
+				content: ''
+				position: absolute
+				bottom: 0
+				right: 0
+				width: 187px
+				height: 278px
+				background: url($img+'hero/leaf_m.webp') center center/cover no-repeat
+				z-index: -1
+
+
+	.container
+		display: flex
+		+to(600px)
+			flex-direction: column
+			height: 100%
+
+	// HEADER_MENU NAV
+	&__nav
+		width: 250px
+		border-right: 1px solid #d3d3d3
+		+sm-block
+			width: 200px
+		+to(600px)
+			width: 100%
+			border-right: none
+			border-bottom: 1px solid #d3d3d3
+			padding-bottom: 18px
+		span
+			color: #c7c7c7
+			text-transform: uppercase
+			font-size: 20px
+			font-family: $bold
+
+	&__items
+		margin-top: 10px
+
+	&__item
+		a
+			display: block
+			padding: 5px 0
+			font-size: 22px
+			color: #3e3e3e
+			transition: color .3s
+			&:hover
+				color: $orange
+
+	// HEADER_MENU Info
+	&__info
+		margin-left: 40px
+		+to(600px)
+			margin-left: 0
+			margin-top: 20px
+
+	&__contacts
+
+	&__info_wrapper
+		display: flex
+		column-gap: 40px
+		margin-top: 10px
+		+lg-block
+			flex-direction: column
+
+	&__title
+		color: #c7c7c7
+		text-transform: uppercase
+		font-size: 20px
+		font-family: $bold
+
+	&__address
+		+lg-block
+			margin-top: 20px
+		span
+			color: #00bfb2
+			font-size: 20px
+		address
+			display: block
+			font-size: 22px
+			margin-top: 10px
+
+	&__number
+		+lg-block
+			margin-top: 40px
+		span
+			display: block
+			color: #00bfb2
+			font-size: 20px
+		a
+			display: block
+			margin-top: 10px
+			font-size: 22px
+			transition: color .3s
+			white-space: nowrap
+			&:hover
+				color: $orange
+
+	&__messengers
+		+lg-block
+			margin-top: 40px
+		span
+			display: block
+			color: #00bfb2
+			font-size: 20px
+		a
+			display: block
+			font-size: 22px
+			padding: 11px 0
+
+	&__time
+		+lg-block
+			margin-top: 40px
+		span
+			display: block
+			color: #00bfb2
+			font-size: 20px
+		div
+			font-size: 22px
+			margin-top: 10px

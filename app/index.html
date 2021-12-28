@@ -10,17 +10,99 @@
     <meta name="format-detection" content="telephone=no"/>
     <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
     <link rel="icon" href="img/icons/favicon.webp" type="image/webp"/>
-    <link rel="preload" href="fonts/PTSans/PTSans-Regular.woff2" crossorigin="anonymous" as="font" type="font/woff2"/>
-    <link rel="preload" href="fonts/PTSans/PTSans-Bold.woff2" crossorigin="anonymous" as="font" type="font/woff2"/>
     <link rel="stylesheet" href="js/libs/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="js/libs/hystmodal/hystmodal.min.css"/>
+    <link rel="stylesheet" href="css/lightgallery-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body class="page">
     <header class="hero">
-      <div class="container"></div>
+      <div class="header">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__menu">
+              <div class="header__logo"><img class="big-logo" src="img/hero/logo-big.svg" alt="logo"/><img class="small-logo" src="img/hero/logo.webp" alt="logo"/>
+              </div>
+              <ul class="header__items">
+                <li class="header__item active"><a class="slide_down" href="#">Главная</a>
+                </li>
+                <li class="header__item"><a class="slide_down" href="#about">О комплексе</a>
+                </li>
+                <li class="header__item"><a class="slide_down" href="#advantages">Преимущества</a>
+                </li>
+                <li class="header__item"><a class="slide_down" href="#layouts">Планировки</a>
+                </li>
+                <li class="header__item"><a class="slide_down" href="#location">Расположение</a>
+                </li>
+                <li class="header__item"><a class="slide_down" href="#materials">Материалы</a>
+                </li>
+                <li class="header__item"><a class="slide_down" href="#prices">Оплата</a>
+                </li>
+                <li class="header__item"><a class="slide_down" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__nav">
+              <div class="header__insta"><a href="#"></a>
+              </div><a class="header__number" href="tel:+77003999933"><span></span>
+              <p>+7 (700)-399-99-33</p></a>
+              <div class="header__menu_btn">
+                <div class="menu_lines"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header_menu">
+        <div class="container">
+          <div class="header_menu__nav"><span>Навигация:</span>
+            <ul class="header_menu__items">
+              <li class="header_menu__item"><a class="active slide_down" href="#about">Главная</a>
+              </li>
+              <li class="header_menu__item"><a class="slide_down" href="#about">О комплексе</a>
+              </li>
+              <li class="header_menu__item"><a class="slide_down" href="#advantages">Преимущества</a>
+              </li>
+              <li class="header_menu__item"><a class="slide_down" href="#layouts">Планировки</a>
+              </li>
+              <li class="header_menu__item"><a class="slide_down" href="#location">Расположение</a>
+              </li>
+              <li class="header_menu__item"><a class="slide_down" href="#materials">Материалы</a>
+              </li>
+              <li class="header_menu__item"><a class="slide_down" href="#prices">Оплата</a>
+              </li>
+              <li class="header_menu__item"><a class="slide_down" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header_menu__info">
+            <div class="header_menu__contacts">
+              <div class="header_menu__title">Контакты:
+              </div>
+              <div class="header_menu__info_wrapper">
+                <div class="header_menu__address"><span>Отдел продаж:</span>
+                  <address>Нур-Султан, пр. Туран, д.46а</address>
+                </div>
+                <div class="header_menu__number"><span>Телефон:</span><a href="tel:+77003999933">+7 700 399 99 33</a>
+                </div>
+                <div class="header_menu__messengers"><span>Мессенджеры:</span><a href="#">Whatsapp</a><a href="#">Instagram</a><a href="#">Telegram</a>
+                </div>
+                <div class="header_menu__time"><span>График работы:</span>
+                  <div>ПН-СБ: с 10:00 до 20:00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero__content"><img src="img/hero/title.webp" alt="title"/>
+          <p>Квартиры с продуманными <br> планировками от 34 м2</p><a class="slide_down" href="#about">О комплексе</a>
+        </div>
+      </div>
     </header>
     <main>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__header">
             <header>
@@ -42,7 +124,7 @@
           </div>
         </div>
       </section>
-      <section class="opportunity">
+      <section class="opportunity" id="opportunity">
         <div class="container">
           <div class="opportunity__header">
             <header>
@@ -88,7 +170,7 @@
           </div>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="container">
           <div class="advantages__header">
             <header>
@@ -115,7 +197,7 @@
           </div>
         </div>
       </section>
-      <section class="layouts">
+      <section class="layouts" id="layouts">
         <div class="container">
           <div class="layouts__header">
             <header>
@@ -129,38 +211,37 @@
             <p>Холостяцкая берлога или просторная квартира для семьи с детьми - у нас найдутся планировки на любой вкус.</p>
           </div>
           <div class="layouts__content">
-            <ul class="tabs">
+            <ul class="tabs" id="js-tabs">
               <li class="tab active">1-комнатные</li>
               <li class="tab">2-комнатные</li>
               <li class="tab">3-комнатные</li>
             </ul>
-            <div class="layouts__items">
-              <div class="layouts_item">
-                <div class="layouts_item__img"><img src="img/layouts/flat_1.webp" alt="flat"/>
-                </div>
-                <div class="layouts_item__descr">
-                  <div class="layouts_item__title">Площадь
+            <div class="layouts__items_mobile swiper">
+              <div class="swiper-wrapper" id="js-cards">
+                <div class="layouts_item swiper-slide">
+                  <div class="layouts_item__img"><img src="#" alt="flat"/>
                   </div>
-                  <div class="layouts_item__size">176,96 м²
+                  <div class="layouts_item__descr">
+                    <div class="layouts_item__title">Площадь
+                    </div>
+                    <div class="layouts_item__size">176,96 м²
+                    </div>
                   </div>
+                  <button class="layouts_item__btn" data-hystmodal="#myModal">Оставить заявку
+                  </button>
                 </div>
-                <button class="layouts_item__btn">Оставить заявку
-                </button>
               </div>
-              <div class="layouts_item">
-                <div class="layouts_item__img"><img src="img/layouts/flat_1.webp" alt="flat"/>
+              <div class="navigation">
+                <div class="swiper-buttons">
+                  <div class="swiper-prev"></div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-next"></div>
                 </div>
-                <div class="layouts_item__descr">
-                  <div class="layouts_item__title">Площадь
-                  </div>
-                  <div class="layouts_item__size">176,96 м²
-                  </div>
-                </div>
-                <button class="layouts_item__btn">Оставить заявку
-                </button>
               </div>
-              <div class="layouts_item">
-                <div class="layouts_item__img"><img src="img/layouts/flat_1.webp" alt="flat"/>
+            </div>
+            <div class="layouts__items_desktop" id="js-cards2">
+              <div class="layouts_item swiper-slide">
+                <div class="layouts_item__img"><img src="#" alt="flat"/>
                 </div>
                 <div class="layouts_item__descr">
                   <div class="layouts_item__title">Площадь
@@ -168,74 +249,14 @@
                   <div class="layouts_item__size">176,96 м²
                   </div>
                 </div>
-                <button class="layouts_item__btn">Оставить заявку
-                </button>
-              </div>
-              <div class="layouts_item">
-                <div class="layouts_item__img"><img src="img/layouts/flat_1.webp" alt="flat"/>
-                </div>
-                <div class="layouts_item__descr">
-                  <div class="layouts_item__title">Площадь
-                  </div>
-                  <div class="layouts_item__size">176,96 м²
-                  </div>
-                </div>
-                <button class="layouts_item__btn">Оставить заявку
-                </button>
-              </div>
-              <div class="layouts_item">
-                <div class="layouts_item__img"><img src="img/layouts/flat_1.webp" alt="flat"/>
-                </div>
-                <div class="layouts_item__descr">
-                  <div class="layouts_item__title">Площадь
-                  </div>
-                  <div class="layouts_item__size">176,96 м²
-                  </div>
-                </div>
-                <button class="layouts_item__btn">Оставить заявку
-                </button>
-              </div>
-              <div class="layouts_item">
-                <div class="layouts_item__img"><img src="img/layouts/flat_1.webp" alt="flat"/>
-                </div>
-                <div class="layouts_item__descr">
-                  <div class="layouts_item__title">Площадь
-                  </div>
-                  <div class="layouts_item__size">176,96 м²
-                  </div>
-                </div>
-                <button class="layouts_item__btn">Оставить заявку
-                </button>
-              </div>
-              <div class="layouts_item">
-                <div class="layouts_item__img"><img src="img/layouts/flat_1.webp" alt="flat"/>
-                </div>
-                <div class="layouts_item__descr">
-                  <div class="layouts_item__title">Площадь
-                  </div>
-                  <div class="layouts_item__size">176,96 м²
-                  </div>
-                </div>
-                <button class="layouts_item__btn">Оставить заявку
-                </button>
-              </div>
-              <div class="layouts_item">
-                <div class="layouts_item__img"><img src="img/layouts/flat_1.webp" alt="flat"/>
-                </div>
-                <div class="layouts_item__descr">
-                  <div class="layouts_item__title">Площадь
-                  </div>
-                  <div class="layouts_item__size">176,96 м²
-                  </div>
-                </div>
-                <button class="layouts_item__btn">Оставить заявку
+                <button class="layouts_item__btn" data-hystmodal="#myModal">Оставить заявку
                 </button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="location">
+      <section class="location" id="location">
         <div class="container">
           <div class="location__header">
             <header>
@@ -282,11 +303,14 @@
               </div>
             </div>
             <div class="location_map">
+              <div id="map"></div>
+              <div id="map2"></div>
+              <div id="map3"></div>
             </div>
           </div>
         </div>
       </section>
-      <section class="materials">
+      <section class="materials" id="materials">
         <div class="container">
           <div class="materials__header">
             <header>
@@ -304,20 +328,20 @@
           <div class="materials__img_desktop">
             <div class="materials__img"><img src="img/materials/bg.webp" alt="image"/>
               <div class="tooltips">
-                <div class="tooltips__one"><img class="tooltips__img" src="img/materials/1.webp" alt="" role="presentation"/>
-                  <div class="tooltips__hover">Декоративная штукатурка
-                  </div>
-                </div>
-                <div class="tooltips__two"><img class="tooltips__img" src="img/materials/2.webp" alt="" role="presentation"/>
+                <div class="tooltips__one"><img class="tooltips__img" src="img/materials/2.webp" alt="" role="presentation"/>
                   <div class="tooltips__hover">Железобетонный монолит
                   </div>
                 </div>
-                <div class="tooltips__three"><img class="tooltips__img" src="img/materials/3.webp" alt="" role="presentation"/>
-                  <div class="tooltips__hover">Натуральный камень
+                <div class="tooltips__two"><img class="tooltips__img" src="img/materials/1.webp" alt="" role="presentation"/>
+                  <div class="tooltips__hover">Фиброцемент
                   </div>
                 </div>
-                <div class="tooltips__four"><img class="tooltips__img" src="img/materials/4.webp" alt="" role="presentation"/>
+                <div class="tooltips__three"><img class="tooltips__img" src="img/materials/4.webp" alt="" role="presentation"/>
                   <div class="tooltips__hover">Алюминиевый профиль
+                  </div>
+                </div>
+                <div class="tooltips__four"><img class="tooltips__img" src="img/materials/3.webp" alt="" role="presentation"/>
+                  <div class="tooltips__hover">Натуральный камень
                   </div>
                 </div>
               </div>
@@ -325,27 +349,27 @@
           </div>
           <div class="materials__img_mobile"><img src="img/materials/bg_m.webp" alt="image"/>
             <div class="tooltips">
-              <div class="tooltips__one"><img class="tooltips__img" src="img/materials/1.webp" alt="" role="presentation"/>
-                <div class="tooltips__hover mob">Декоративная штукатурка
-                </div>
-              </div>
-              <div class="tooltips__two"><img class="tooltips__img" src="img/materials/2.webp" alt="" role="presentation"/>
+              <div class="tooltips__three"><img class="tooltips__img" src="img/materials/2.webp" alt="" role="presentation"/>
                 <div class="tooltips__hover mob">Железобетонный монолит
                 </div>
               </div>
-              <div class="tooltips__three"><img class="tooltips__img" src="img/materials/3.webp" alt="" role="presentation"/>
-                <div class="tooltips__hover mob">Натуральный камень
+              <div class="tooltips__two"><img class="tooltips__img" src="img/materials/1.webp" alt="" role="presentation"/>
+                <div class="tooltips__hover mob">Фиброцемент
                 </div>
               </div>
               <div class="tooltips__four"><img class="tooltips__img" src="img/materials/4.webp" alt="" role="presentation"/>
                 <div class="tooltips__hover mob">Алюминиевый профиль
                 </div>
               </div>
+              <div class="tooltips__one"><img class="tooltips__img" src="img/materials/3.webp" alt="" role="presentation"/>
+                <div class="tooltips__hover mob">Натуральный камень
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="prices">
+      <section class="prices" id="prices">
         <div class="container">
           <header>
             <div class="title-info">
@@ -365,7 +389,7 @@
               </div>
               <div class="prices_item__fee">Первоначальный взнос
               </div>
-              <button class="prices_item__btn">РАССЧИТАТЬ
+              <button class="prices_item__btn" data-hystmodal="#myModal">РАССЧИТАТЬ
               </button>
             </div>
             <div class="prices_item prices_item--installment">
@@ -377,16 +401,52 @@
               </div>
               <div class="prices_item__fee">Первоначальный взнос
               </div>
-              <button class="prices_item__btn">РАССЧИТАТЬ
+              <button class="prices_item__btn" data-hystmodal="#myModal">РАССЧИТАТЬ
               </button>
             </div>
           </div>
         </div>
       </section>
+      <section class="gallery">
+        <div class="container">
+          <div class="gallery-container"><a href="img/layouts/1/1-1544.png"><img src="img/layouts/1/1-1544.png" alt="First image"/></a></div>
+          <div class="gallery-container"><a href="img/layouts/1/1-1544.png"><img src="img/layouts/1/1-1544.png" alt="First image"/></a></div>
+        </div>
+      </section>
       <div class="modal">
+        <div class="hystmodal" id="myModal" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <form class="modal">
+                <div class="hystmodal__close" data-hystclose=""><span></span>
+                  <p>Закрыть</p>
+                </div>
+                <div class="modal__container">
+                  <div class="modal__header">Заказать<span>звонок</span>
+                  </div>
+                  <div class="modal__text">Оставьте свои данные и с вами  обязательно свяжутся
+                  </div>
+                  <div class="modal__inputs">
+                    <input type="text" name="name" placeholder="Ваше имя"/>
+                    <input type="text" name="phone" placeholder="+7 (ХХХ) -ХХХ-ХХ-ХХ"/>
+                  </div>
+                  <div class="modal__checkbox">
+                    <input class="checkbox" type="checkbox"/>
+                    <label>Я даю согласие на обработку персональных данных.</label>
+                  </div>
+                  <div class="modal__btn">
+                    <button class="btn">Отправить
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
+      <button class="button-open"></button>
     </main>
-    <footer class="contacts">
+    <footer class="contacts" id="contacts">
       <div class="container">
         <div class="contacts__header">
           <header>
@@ -407,7 +467,7 @@
           </div>
           <div class="contacts-item">
             <div class="contacts-item__title">Телефон:
-            </div><a class="contacts-item__number" href="tel:+77001433333">+ 7 700 143 33 33</a>
+            </div><a class="contacts-item__number" href="tel:+77003999933">+7 700 399 99 33</a>
           </div>
           <div class="contacts-item">
             <div class="contacts-item__title">Мессенджеры:
@@ -425,7 +485,12 @@
       </div>
     </footer>
     <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/jquery.maskedinput.min.js"></script>
+    <script src="js/libs/hystmodal/hystmodal.min.js"></script>
+    <script src="js/libs/lightgallery/lightgallery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=web&amp;lang=ru_RU"></script>
     <script src="js/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

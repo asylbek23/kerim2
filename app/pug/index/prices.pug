@@ -1,5 +1,5 @@
 mixin prices()
-	+b.SECTION.prices
+	+b.SECTION.prices#prices
 		.container
 			header
 				.title-info
@@ -14,10 +14,10 @@ mixin prices()
 					+e.subtitle Без дополнительного залога
 					+e.percent от 30%
 					+e.fee Первоначальный взнос
-					+e.BUTTON.btn РАССЧИТАТЬ
+					+e.BUTTON.btn(data-hystmodal="#myModal") РАССЧИТАТЬ
 				+b.prices_item.--installment
 					+e.title РАССРОЧКА:
 					+e.subtitle Последний платеж до ввода в эксплуатацию
 					+e.percent от 20%
 					+e.fee Первоначальный взнос
-					+e.BUTTON.btn РАССЧИТАТЬ
+					+e.BUTTON.btn(data-hystmodal="#myModal") РАССЧИТАТЬ

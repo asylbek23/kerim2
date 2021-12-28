@@ -1,6 +1,106 @@
 //- Так пишется миксины
 mixin hero(data)
+	//-  HERO ---------------- >
 	+b.HEADER.hero
+
+		//- HEADER -------------- >
+		+b.header
+			.container
+				//- HEADER CONTENT
+				+e.content
+					//- HEADER MENU
+					+e.menu
+						//- HEADER LOGO
+						+e.logo
+							img(src="img/hero/logo-big.svg", alt="logo").big-logo
+							img(src="img/hero/logo.webp", alt="logo").small-logo
+						//- HEADER ITEMS
+						+e.UL.items
+							+e.LI.item.active
+								a(href="#").slide_down Главная
+							//- +e.LI.item
+							//- 	a(href="#").active.slide_down Главная
+							+e.LI.item
+								a(href="#about").slide_down О комплексе
+							+e.LI.item
+								a(href="#advantages").slide_down Преимущества
+							+e.LI.item
+								a(href="#layouts").slide_down Планировки
+							+e.LI.item
+								a(href="#location").slide_down Расположение
+							+e.LI.item
+								a(href="#materials").slide_down Материалы
+							+e.LI.item
+								a(href="#prices").slide_down Оплата
+							+e.LI.item
+								a(href="#contacts").slide_down Контакты
+
+					//- HEADER NAV
+					+e.nav
+						//- HEADER INSTA
+						+e.insta
+							a(href="#")
+						//- HEADER NUMBER
+						+e.A(href="tel:+77003999933").number
+							span
+							p +7 (700)-399-99-33
+						//- HEADER MENU BTN
+						+e.menu_btn
+							.menu_lines
+								span.top
+								span.middle
+								span.bottom
+
+		//- HEADER MENU
+		+b.header_menu
+			.container
+				//- Header Menu Nav
+				+e.nav
+					span Навигация:
+					+e.UL.items
+						+e.LI.item
+							a(href="#about").active.slide_down Главная
+						+e.LI.item
+							a(href="#about").slide_down О комплексе
+						+e.LI.item
+							a(href="#advantages").slide_down Преимущества
+						+e.LI.item
+							a(href="#layouts").slide_down Планировки
+						+e.LI.item
+							a(href="#location").slide_down Расположение
+						+e.LI.item
+							a(href="#materials").slide_down Материалы
+						+e.LI.item
+							a(href="#prices").slide_down Оплата
+						+e.LI.item
+							a(href="#contacts").slide_down Контакты
+				//- Header Menu Info
+				+e.info
+					+e.contacts
+						+e.title Контакты:
+
+						+e.info_wrapper
+
+							+e.address
+								span Отдел продаж:
+								address Нур-Султан, пр. Туран, д.46а
+							+e.number
+								span Телефон:
+								a(href="tel:+77003999933") +7 700 399 99 33
+							+e.messengers
+								span Мессенджеры:
+								a(href="#") Whatsapp
+								a(href="#") Instagram
+								a(href="#") Telegram
+							+e.time
+								span График работы:
+								div ПН-СБ: с 10:00 до 20:00
+
 		.container
+			//- HERO CONTENT
+			+e.content
+				img(src="img/hero/title.webp", alt="title")
+				p Квартиры с продуманными <br> планировками от 34 м2
+				a(href="#about").slide_down О комплексе
 
 		//- +title({"text": "Lorem ipsum dolor sit amet."})
